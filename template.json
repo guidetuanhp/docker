@@ -72,7 +72,7 @@
   "variables": {
     "imagePublisher": "Canonical",
     "imageOffer": "UbuntuServer",
-    "nicName": "myVMNicD",
+    "nicName": "[concat(variables('vmName'),'myVMNicD')]",
     "extensionName": "DockerExtension",
     "addressPrefix": "10.0.0.0/16",
     "subnetName": "Subnet",
@@ -80,8 +80,8 @@
     "diskStorageType": "StandardSSD_LRS",
     "publicIPAddressName": "myPublicIPD",
     "publicIPAddressType": "Dynamic",
-    "vmName": "MyDockerVM",
-    "virtualNetworkName": "MyVNETD",
+    "vmName": "[concat('myvmname', uniqueString(resourceGroup().id))]",
+    "virtualNetworkName": "[concat(variables('vmName'),'MyVNETD')]",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
     "linuxConfiguration": {
       "disablePasswordAuthentication": true,
