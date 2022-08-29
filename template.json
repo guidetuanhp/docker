@@ -4,14 +4,14 @@
   "parameters": {
     "adminUsername": {
       "type": "string",
-	  "defaultValue": "[uniqueString( resourceGroup().id, deployment().name )]",
+	  "defaultValue": "guide",
       "metadata": {
         "description": "Username for the Virtual Machine."
       }
     },
     "dnsNameForPublicIP": {
       "type": "string",
-	"defaultValue": "[toLower(format('{0}-{1}', parameters('vmName'), uniqueString(resourceGroup().id)))]",
+	"defaultValue": "[toLower(format('{0}-{1}', parameters('adminUsername'), uniqueString(resourceGroup().id)))]",
       "metadata": {
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
