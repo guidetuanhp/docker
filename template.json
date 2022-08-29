@@ -2,18 +2,19 @@
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
-	  "vmName": {
-      "type": "string",
-      "defaultValue": "[toLower(format('{0}-{1}', parameters('adminUsername'), uniqueString(resourceGroup().id)))]",
-      "metadata": {
-        "description": "The name of you Virtual Machine."
-      }
-    },
+	  
     "adminUsername": {
       "type": "string",
 	  "defaultValue": "guide",
       "metadata": {
         "description": "Username for the Virtual Machine."
+      }
+    },
+	  "vmName": {
+      "type": "string",
+      "defaultValue": "[toLower(format('{0}-{1}', parameters('adminUsername'), uniqueString(resourceGroup().id)))]",
+      "metadata": {
+        "description": "The name of you Virtual Machine."
       }
     },
     "dnsNameForPublicIP": {
