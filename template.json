@@ -11,6 +11,7 @@
     },
     "dnsNameForPublicIP": {
       "type": "string",
+	 "defaultValue":   "[uniqueString( resourceGroup().id, deployment().name )]",
       "metadata": {
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
