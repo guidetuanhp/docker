@@ -1,0 +1,7 @@
+"storageAccountName": {
+   "type": "string",
+   "defaultValue": "[concat('storage', uniqueString(resourceGroup().id))]",
+   "metadata": {
+     "description": "Name of the storage account"
+   }
+}
