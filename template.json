@@ -11,7 +11,7 @@
     },
     "dnsNameForPublicIP": {
       "type": "string",
-	"defaultValue": "[toLower(format('{0}-{1}', parameters('adminUsername'), uniqueString(resourceGroup().id)))]",
+	"defaultValue": null,
       "metadata": {
         "description": "Unique DNS Name for the Public IP used to access the Virtual Machine."
       }
