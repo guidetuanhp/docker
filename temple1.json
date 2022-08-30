@@ -94,7 +94,7 @@
         ]
       }
     },
-    "networkSecurityGroupName": "default-NSG"
+    "networkSecurityGroupName": "[concat('default-NSG', uniqueString(resourceGroup().id))]"
   },
   "resources": [
     {
